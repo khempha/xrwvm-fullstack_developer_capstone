@@ -68,7 +68,7 @@ const Dealer = () => {
 
 
 return(
-  <div style={{margin:"200px"}}>
+  <div style={{margin:"20px"}}>
       <Header/>
       <div style={{marginTop:"10px"}}>
       <h1 style={{color:"grey"}}>{dealer.full_name}{postReview}</h1>
