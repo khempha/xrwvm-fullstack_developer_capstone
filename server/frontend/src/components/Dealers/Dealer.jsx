@@ -6,8 +6,7 @@ import positive_icon from "../assets/positive.png"
 import neutral_icon from "../assets/neutral.png"
 import negative_icon from "../assets/negative.png"
 import review_icon from "../assets/reviewbutton.png"
-import Header from '../Header/Header';
-
+import Header from '../Header/Header'
 const Dealer = () => {
 
 
@@ -56,15 +55,18 @@ const Dealer = () => {
     return icon;
   }
 
-  useEffect(() => {
-    get_dealer();
-    get_reviews();
-    if(sessionStorage.getItem("username")) {
-      setPostReview(<a href={post_review}><img src={review_icon} style={{width:'10%',marginLeft:'10px',marginTop:'10px'}} alt='Post Review'/></a>)
 
-      
-    }
-  },[]);  
+  useEffect(() => {
+  get_dealer();
+  get_reviews();
+  if(sessionStorage.getItem("username")) {
+    setPostReview(
+      <a href={post_review}>
+        <img src={review_icon} style={{width:'10%', marginLeft:'10px', marginTop:'10px'}} alt='Post Review'/>
+      </a>
+    );
+  }
+}, []);
 
 
 return(
