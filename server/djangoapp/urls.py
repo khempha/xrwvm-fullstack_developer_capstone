@@ -8,9 +8,9 @@ from django.contrib.auth import views as auth_views
 
 app_name = 'djangoapp'
 urlpatterns = [
-    path('register/', views.registration, name='Register'),
+    path('register', view=views.registration, name='Register'),
     path(route='login', view=views.login_user, name='login'),
-    path('logout/', auth_views.LogoutView.as_view(), name='logout'),
+    path('logout', auth_views.LogoutView.as_view(), name='logout'),
     path(route='get_cars', view=views.get_cars, name='getcars'),
     path(route='get_dealers', view=views.get_dealerships, name='get_dealers'),
     path(route='get_dealers/<str:state>', view=views.get_dealerships,

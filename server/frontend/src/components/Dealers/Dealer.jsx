@@ -31,7 +31,7 @@ const Dealer = () => {
     const retobj = await res.json();
     
     if(retobj.status === 200) {
-      setDealer(retobj.dealer)
+      setDealer(retobj.dealer[0])
     }
   }
 
@@ -40,7 +40,7 @@ const Dealer = () => {
       method: "GET"
     });
     const retobj = await res.json();
-    
+  
     if(retobj.status === 200) {
       if(retobj.reviews.length > 0){
         setReviews(retobj.reviews)
